@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="Images/Logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#menuOpener").click(function () {
+                if ($(".navbar-menu").hasClass("active")) {
+                    $(".navbar-menu").removeClass("active");
+                } else {
+                    $(".navbar-menu").addClass("active");
+                }
+
+            });
+        });
+    </script>
+
+    <title>IMDB</title>
+</head>
+
+<body class="index">
+
+    <div class="page-content-wrapper">
+        <div class="navbar" id="index-nav">
+            <div style="padding-left: 0px;" id="logo-navbar">
+                <a href="index.html"> <img src="Images/Logo.png" width="100"
+                        height="70"> </a>
+            </div>
+            <div>
+                <ul id="list-navbar">
+
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="kontakt.html">Grade</a></li>
+                    <li><a href="comment.html">See comments</a></li>
+                    <li><a href="galerija.html">Gallery</a></li>
+                    
+                    <span id="menuOpener"><i class="fa fa-bars"></i></span>
+                </ul>
+            </div>
+        </div>
+
+         <div class="mobile-nav">
+            <nav class="navbar-menu">
+
+                <ul class="menu-listing">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kontakt.html">Grade</a></li>
+                    <li><a href="comment.html">See comments</a></li>
+                    <li><a href="galerija.html">Gallery</a></li>
+                    
+                </ul>
+            </nav>
+         </div>
+
+
+
+         <div class="footer">
+            <div class="telo red ">
+                
+                <div>
+                    <p>
+                        Contact us: 
+                    <a href="mailto:imdb@gmail.com">imdb@gmail.com</a>
+                    </p>
+
+                    
+                    <p>
+                       Social media: 
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

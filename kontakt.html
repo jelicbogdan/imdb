@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="Images/Logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+        integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#menuOpener").click(function () {
+                if ($(".navbar-menu").hasClass("active")) {
+                    $(".navbar-menu").removeClass("active");
+                } else {
+                    $(".navbar-menu").addClass("active");
+                }
+
+            });
+        });
+    </script>
+
+<script type="text/javascript">
+
+
+        function validate() {
+
+
+            if (document.myForm.ime.value == "") {
+                alert("Name is a required field!");
+                document.myForm.ime.focus();
+                return false;
+            }
+
+            if (document.myForm.prezime.value == "") {
+                alert("Last name is a required field!");
+                document.myForm.prezime.focus();
+                return false;
+            }
+
+
+            if (document.myForm.email.value == '') {
+                alert("Email is a required field!");
+                document.myForm.email.focus();
+                return false;
+            }
+            if (document.myForm.email.value.indexOf('@') == -1) {
+                alert("Error!");
+                document.myForm.email.focus();
+                return false;
+
+            }
+
+            
+            return confirm("Successful!")
+            return (true);
+        }
+
+    </script>
+
+    <title>IMDB</title>
+</head>
+
+<body class="index">
+
+    <div class="page-content-wrapper">
+        <div class="navbar" id="index-nav">
+            <div style="padding-left: 0px;" id="logo-navbar">
+                <a href="index.html"> <img src="Images/Logo.png" width="100"
+                        height="70"> </a>
+            </div>
+            <div>
+                <ul id="list-navbar">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="kontakt.html">Grade</a></li>
+                    <li><a href="comment.html">See comments</a></li>
+                    <li><a href="galerija.html">Gallery</a></li>
+                    
+                    <span id="menuOpener"><i class="fa fa-bars"></i></span>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mobile-nav">
+            <nav class="navbar-menu">
+
+                <ul class="menu-listing">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kontakt.html">Grade</a></li>
+                    <li><a href="comment.html">See comments</a></li>
+                    <li><a href="galerija.html">Gallery</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+
+        <div id="telo">
+
+            <div class="kontakt">
+                <p style="color: white;">Grade your movie</p>
+                <form action="kontakt.html" name="myForm" onsubmit="return(validate());">
+
+                    <div style="color: white;" class="label">
+                        <label style="color: white;">Name*:</label>
+                    </div>
+                    <div>
+                        <input class="polja" name="ime" type="text" />
+                    </div>
+
+                    <div class="label">
+                        <label style="color: white;">Last name*:</label>
+                    </div>
+                    <div>
+                        <input class="polja" name="prezime" type="text" />
+                    </div>
+
+                    <div class="label">
+                        <label style="color: white;">E-mail*:</label>
+                    </div>
+                    <div>
+                        <input class="polja" name="email" type="text" />
+                    </div>
+
+                    <div class="label">
+                        <label style="color: white;">Phone number: </label>
+                    </div>
+                    <div>
+                        <input class="polja" name="telefon" type="text"
+                            onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" />
+                    </div>
+
+                    <div class="label">
+                        <label style="color: white;">Movie:</label>
+                    </div>
+                    <div>
+                    <select class="form-control" id="sel1">
+                            <option>Tenet</option>
+                            <option>Mulan</option>
+                            <option>No time to die</option>
+                            <option>Antebellum</option>
+                            <option>Black widow</option>
+                    </select>
+                    </div>
+                    <div class="label">
+                        <label style="color: white;">Comment: </label>
+                    </div>
+                    <div>
+                        <textarea class="polja" rows="5" placeholder="I liked/didn't like the movie"></textarea>
+                    </div>
+                    <div class="dugmici">
+                        <div class="submit">
+                            <input style="border: 1px; background-color: white;color: black" type="submit" value="Submit" />
+                        </div>
+
+                        <div class="reset">                          
+                            <input style="border: 1px; background-color: white;color: black" type="reset" value="Reset">                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <div class="telo red ">
+                
+                <div>
+                    <p>
+                        Contact us: 
+                    <a href="mailto:imdb@gmail.com">imdb@gmail.com</a></p>
+                    
+                    <p>
+                       Social media: 
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com"><i class="fa fa-facebook-official"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
